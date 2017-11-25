@@ -1,1 +1,25 @@
-<p>Games Cart</p>
+<div class="app-cart">
+
+  <div class="row">
+    <div class="app-cart__title">
+      <h4>carrinho</h4>
+      <div class="cart-length" *ngIf="!isCartEmpty">
+        <p>({{cartLength}} itens)</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="empty-cart" *ngIf="isCartEmpty">
+      <div>
+        <img class="empty-cart__img" src="assets/img/cart.svg" alt="carrinho vazio">
+        <p class="empty-cart__text">Até o momento seu carrinho está vazio!</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+</div>
