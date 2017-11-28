@@ -7,7 +7,7 @@
     </div>
 
     <div class="col-5 game-filter">
-      <select class="form-control">
+      <select [(ngModel)]="gameFilter" class="form-control" (change)="getSelectedValue()">
         <option *ngFor="let filter of filterOptions" [value]="filter.value">
           {{filter.option}}
         </option>
