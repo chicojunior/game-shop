@@ -1,8 +1,10 @@
-import { Component, OnInit, OnChanges } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 
 import { GamesService } from './games.service';
 
 import { Game } from './game.model';
+
+import { ShareDataService } from '../shared/share-data.service';
 
 @Component({
   selector: 'app-games',
@@ -11,11 +13,16 @@ import { Game } from './game.model';
 })
 export class GamesComponent implements OnInit  {
 
+  @Output() game: any;
+
   filterOptions: any[];
+  // game: any;
+  cart: any = [];
   games: any;
   gameFilter: any;
+  addToCart: boolean;
 
-  constructor(private gService: GamesService) { }
+  constructor(private gService: GamesService, private dService: ShareDataService) { }
 
   ngOnInit() {
     this.filterOptions = this.gService.getFilterOptions();
@@ -31,6 +38,21 @@ export class GamesComponent implements OnInit  {
 
   getSelectedValue() {
     this.filterGames(this.gameFilter)
+  }
+
+  addGameToCart(game) {
+    this.cart.push(game);
+    this.dService.data = this.cart;
+    console.log(this.cart);
+  }
+
+  showOption(game) {
+    // this.addToCart = true;
+    // console.log(game);
+  }
+
+  hideOption() {
+    // this.addToCart = false;
   }
 
   filterGames(filterOption: any) {

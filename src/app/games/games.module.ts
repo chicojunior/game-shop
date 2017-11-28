@@ -7,14 +7,18 @@ import { GamesComponent } from './games.component';
 
 import { GamesService } from './games.service';
 
+import { SharedModule } from '../shared/shared.module';
+import { ShareDataService } from '../shared/share-data.service';
+
 @NgModule({
   imports: [
     CommonModule,
     HttpModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
   declarations: [GamesComponent],
   exports: [GamesComponent],
-  providers: [GamesService]
+  providers: [GamesService, ShareDataService]
 })
 export class GamesModule { }

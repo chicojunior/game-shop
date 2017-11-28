@@ -10,6 +10,7 @@
 
   .game-card {
     margin: 10px auto;
+    cursor: pointer;
 
     // bootstrap class
     .card {
@@ -26,6 +27,13 @@
       -webkit-transition: top 0.5s ease-out;
       -moz-transition: top 0.5s ease-out;
       transition: top 0.5s ease-out;
+    }
+
+    .card-text {
+      &--blue {
+        font-weight: bold;
+        color: #4D95E0;
+      }
     }
   }
 }
