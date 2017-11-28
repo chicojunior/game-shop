@@ -1,0 +1,32 @@
+<div class="app-games">
+
+  <div class="row">
+
+    <div class="col title">
+      <h1>Chico Games</h1>
+    </div>
+
+    <div class="col-5 game-filter">
+      <select [(ngModel)]="gameFilter" class="form-control" (change)="getSelectedValue()">
+        <option *ngFor="let filter of filterOptions" [value]="filter.value">
+          {{filter.option}}
+        </option>
+      </select>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="game-card" *ngFor="let game of games">
+      <div class="card">
+        <img class="game-card__img" src="{{game.image}}">
+        <div class="card-body">
+          <p class="card-text">{{game.name}}</p>
+          <p class="card-text">R$ {{game.price}}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

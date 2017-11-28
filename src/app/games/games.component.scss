@@ -1,0 +1,31 @@
+.app-games {
+
+  .title {
+    font-weight: bold;
+  }
+
+  .game-filter {
+    margin: auto 0;
+  }
+
+  .game-card {
+    margin: 10px auto;
+
+    // bootstrap class
+    .card {
+      width: 250px;
+      height: 350px;
+    }
+
+    &__img {
+      width: 200px;
+      margin: 10px auto;
+    }
+
+    option {
+      -webkit-transition: top 0.5s ease-out;
+      -moz-transition: top 0.5s ease-out;
+      transition: top 0.5s ease-out;
+    }
+  }
+}
