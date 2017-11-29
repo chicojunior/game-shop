@@ -2,8 +2,8 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
-
   width: 100%;
+  color: #8D8A8A;
 
   &__title {
     width: 100%;
@@ -31,6 +31,45 @@
 
     &__text {
       text-align: center;
+    }
+  }
+
+  .cart-game-item {
+
+    cursor: pointer;
+
+    &__image {
+      display: inline-block;
+      height: 100%;
+      vertical-align: top;
+
+      img {
+        width: 50px;
+      }
+    }
+
+    &__text {
+      font-size: 12px;
+      display: inline-block;
+      max-width: 125px;
+
+      &--highlight {
+        font-weight: bold;
+        color: #000;
+      }
+
+    }
+
+    &__button {
+      display: inline-block;
+      vertical-align: top;
+      cursor: pointer;
+
+      button {
+        color: #4D95E0;
+        background-color: transparent;
+      }
+
     }
   }
 }

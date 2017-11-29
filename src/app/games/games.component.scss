@@ -1,4 +1,5 @@
 .app-games {
+  color: #8D8A8A;
 
   .title {
     font-weight: bold;
@@ -16,11 +17,18 @@
     .card {
       width: 250px;
       height: 350px;
+      border: none;
+    }
+
+    .card-body {
+      text-align: center;
     }
 
     &__img {
       width: 200px;
       margin: 10px auto;
+      background-color: #ededee;
+      padding: 30px 20px;
     }
 
     option {

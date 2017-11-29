@@ -26,7 +26,7 @@
           </div>
           <div *ngIf="!addToCart">
             <p class="card-text">{{game.name}}</p>
-            <p class="card-text card-text--blue">R$ {{game.price}}</p>
+            <p class="card-text card-text--blue">{{game.price | currency:'BRL':true}}</p>
           </div>
         </div>
       </div>

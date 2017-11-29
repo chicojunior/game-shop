@@ -19,6 +19,7 @@ export class CartComponent implements OnInit, DoCheck {
   gameList: any = [];
 
   isCartEmpty = true;
+  showIcon = false;
 
   constructor(private dataService: ShareDataService) { }
 
@@ -37,6 +38,25 @@ export class CartComponent implements OnInit, DoCheck {
 
     console.log(this.gameList);
     // this.dataService.updateData().subscribe(res => this.gameList = res);
+  }
+
+  removeItem(game) {
+    console.log(game);
+    console.log(this.gameList.indexOf(game));
+
+    let index = this.gameList.indexOf(game);
+    if (index > -1) {
+      this.gameList.splice(index, 1);
+    }
+  }
+
+  showButton(game) {
+    this.showIcon = true;
+
+  }
+
+  hideButton(game) {
+    this.showIcon = false;
   }
 
 

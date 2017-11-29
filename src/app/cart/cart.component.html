@@ -13,7 +13,20 @@
 
     <div class="cart" *ngIf="!isCartEmpty">
       <div *ngFor="let game of gameList">
-        <p>{{game.name}}</p>
+        <div class="cart-game-item" (click)="removeItem(game)" (mouseover)="showButton(game)" (mouseout)="hideButton(game)">
+          <div class="cart-game-item__image">
+            <img src="{{game.image}}">
+          </div>
+          <div class="cart-game-item__text">
+            <p>{{game.name}}</p>
+            <p class="cart-game-item__text--highlight">{{game.price | currency:'BRL':true}}</p>
+          </div>
+          <div class="cart-game-item__button" *ngIf="showIcon">
+            <button class="btn" name="button">
+              <i class="fa fa-times-circle" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
 
