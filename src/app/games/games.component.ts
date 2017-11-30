@@ -16,7 +16,6 @@ export class GamesComponent implements OnInit  {
   @Output() game: any;
 
   filterOptions: any[];
-  // game: any;
   cart: any = [];
   games: any;
   gameFilter: any;
@@ -45,13 +44,12 @@ export class GamesComponent implements OnInit  {
     this.dService.data = this.cart;
   }
 
-  showOption(game) {
-    // this.addToCart = true;
-    // console.log(game);
+  showOption() {
+    this.addToCart = true;
   }
 
   hideOption() {
-    // this.addToCart = false;
+    this.addToCart = false;
   }
 
   filterGames(filterOption: any) {
