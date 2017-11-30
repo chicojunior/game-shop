@@ -19,6 +19,9 @@
     }
   }
 
+  .cart {
+    width: 100%;
+  }
 
 
   .empty-cart {
@@ -71,5 +74,29 @@
       }
 
     }
+  }
+
+  .cart-game-values {
+
+    &__item {
+      width: 100%;
+
+      p,
+      label {
+        display: inline-block;
+        width: 100%;
+        padding: 0;
+      }
+
+      p {
+        text-align: right;
+        font-weight: bold;
+      }
+
+      label {
+        text-align: left;
+      }
+    }
+
   }
 }

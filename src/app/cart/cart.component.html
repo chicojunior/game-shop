@@ -13,7 +13,7 @@
 
     <div class="cart" *ngIf="!isCartEmpty">
 
-      <div class="cart-game-list" *ngFor="let game of gameList" #cartGameList>
+      <div class="cart-game-list" *ngFor="let game of gameList">
         <div class="cart-game-item" (click)="removeItem(game)" (mouseover)="showButton(game)" (mouseout)="hideButton(game)">
           <div class="cart-game-item__image">
             <img src="{{game.image}}">
@@ -32,19 +32,19 @@
 
       <div class="cart-game-values">
 
-        <div>
-          <label>subtotal</label>
-          <p>{{subtotal | currency:'BRL':true}}</p>
+        <div class="row cart-game-values__item">
+          <label class="col">subtotal</label>
+          <p class="col">{{subtotal | currency:'BRL':true}}</p>
         </div>
 
-        <div>
-          <label>frete</label>
-          <p>{{frete | currency:'BRL':true}}</p>
+        <div class="row cart-game-values__item">
+          <label class="col">frete</label>
+          <p class="col">{{frete | currency:'BRL':true}}</p>
         </div>
 
-        <div>
-          <label>total</label>
-          <p>{{total | currency:'BRL':true}}</p>
+        <div class="row cart-game-values__item">
+          <label class="col">total</label>
+          <p class="col">{{total | currency:'BRL':true}}</p>
         </div>
 
       </div>
