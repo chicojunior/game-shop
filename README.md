@@ -1,28 +1,37 @@
-# GameShop
+# **Game Shop**
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.6.
+Teste para desenvolvedor front-end da [Consulta Remedios](https://consultaremedios.com.br/).
 
-## Development server
+Live Demo: https://cr-game-shop.firebaseapp.com/
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Dependências
 
-## Code scaffolding
+- [Node.js](https://nodejs.org/en/)
+- [NPM](https://www.npmjs.com/)
+- [Angular CLI](https://github.com/angular/angular-cli)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+## Rodando o servidor em dev
 
-## Build
+Com o angular-cli instalado, clone o projeto:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+```shell
+git clone https://github.com/chicojunior/game-shop.git
+```
 
-## Running unit tests
+Abra a pasta do projeto:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```shell
+cd game-shop
+```
 
-## Running end-to-end tests
+Dentro da raiz do projeto rode o comando:
+```shell
+npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+Após a instalação das dependências:
+```shell
+ng serve
+```
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+O projeto ira rodar no endereço: localhost:4200
