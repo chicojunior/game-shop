@@ -43,7 +43,6 @@ export class GamesComponent implements OnInit  {
   addGameToCart(game) {
     this.cart.push(game);
     this.dService.data = this.cart;
-    console.log(this.cart);
   }
 
   showOption(game) {
