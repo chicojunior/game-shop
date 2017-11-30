@@ -1,6 +1,6 @@
 {
   "name": "game-shop",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy-local": "ng build --prod && cp -a /home/chico/Desktop/dev/consulta-remedios-test/game-shop/dist/* /home/chico/Desktop/dev/consulta-remedios-test/dist/public" 
+    "deploy-local": "ng build --prod && cp -a /home/chico/Desktop/dev/consulta-remedios-test/game-shop/dist/* /home/chico/Desktop/dev/consulta-remedios-test/dist/public"
   },
   "private": true,
   "dependencies": {
