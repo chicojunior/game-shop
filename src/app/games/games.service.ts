@@ -13,6 +13,7 @@ export class GamesService {
 
   games: Game[];
   options: any[];
+  cart: any = [];
 
   constructor(private http: Http) { }
 

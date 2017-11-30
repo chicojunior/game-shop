@@ -3,7 +3,7 @@
   <div class="row">
 
     <div class="col title">
-      <h1>Chico Games</h1>
+      <h1>CM Games</h1>
     </div>
 
     <div class="col-5 game-filter">
@@ -18,11 +18,16 @@
 
   <div class="row">
     <div class="game-card" *ngFor="let game of games">
-      <div class="card">
+      <div class="card" (mouseover)="showOption(game)" (mouseout)="hideOption()" (click)="addGameToCart(game)">
         <img class="game-card__img" src="{{game.image}}">
         <div class="card-body">
-          <p class="card-text">{{game.name}}</p>
-          <p class="card-text">R$ {{game.price}}</p>
+          <div>
+            <p class="card-text card-text--blue" *ngIf="addToCart">Adicionar ao carrinho</p>
+          </div>
+          <div *ngIf="!addToCart">
+            <p class="card-text">{{game.name}}</p>
+            <p class="card-text card-text--blue">{{game.price | currency:'BRL':true}}</p>
+          </div>
         </div>
       </div>
     </div>

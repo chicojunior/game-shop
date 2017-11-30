@@ -1,4 +1,5 @@
 .app-games {
+  color: #8D8A8A;
 
   .title {
     font-weight: bold;
@@ -10,22 +11,37 @@
 
   .game-card {
     margin: 10px auto;
+    cursor: pointer;
 
     // bootstrap class
     .card {
       width: 250px;
       height: 350px;
+      border: none;
+    }
+
+    .card-body {
+      text-align: center;
     }
 
     &__img {
       width: 200px;
       margin: 10px auto;
+      background-color: #ededee;
+      padding: 30px 20px;
     }
 
     option {
       -webkit-transition: top 0.5s ease-out;
       -moz-transition: top 0.5s ease-out;
       transition: top 0.5s ease-out;
+    }
+
+    .card-text {
+      &--blue {
+        font-weight: bold;
+        color: #4D95E0;
+      }
     }
   }
 }
