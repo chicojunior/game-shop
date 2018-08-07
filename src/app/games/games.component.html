@@ -18,15 +18,16 @@
 
   <div class="row">
     <div class="game-card" *ngFor="let game of games">
-      <div class="card" (mouseover)="showOption(game)" (mouseout)="hideOption()" (click)="addGameToCart(game)">
+      <div class="card">
         <img class="game-card__img" src="{{game.image}}">
         <div class="card-body">
-          <div>
+          <!-- <div>
             <p class="card-text card-text--blue" *ngIf="addToCart">Adicionar ao carrinho</p>
-          </div>
-          <div *ngIf="!addToCart">
+          </div> -->
+          <div>
             <p class="card-text">{{game.name}}</p>
             <p class="card-text card-text--blue">{{game.price | currency:'BRL':true}}</p>
+            <button class="btn btn-success" (click)="addGameToCart(game)">Adicionar ao carrinho</button>
           </div>
         </div>
       </div>

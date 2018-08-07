@@ -44,14 +44,6 @@ export class GamesComponent implements OnInit  {
     this.dService.data = this.cart;
   }
 
-  showOption() {
-    this.addToCart = true;
-  }
-
-  hideOption() {
-    this.addToCart = false;
-  }
-
   filterGames(filterOption: any) {
     switch (parseInt(filterOption)) {
       case 0:
